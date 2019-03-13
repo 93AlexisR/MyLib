@@ -8,6 +8,28 @@
 
 #ifndef PCH_H
 #define PCH_H
+constexpr auto PI_VALUE = 3.141592653589;
+#include <iostream>
+#include <string>
+#include <array>		
+#include <sstream> 
+#include <vector>
+#include <iomanip>
+#include <cstdlib>
+#include <ctime>
+#include <random>
+#include <math.h>
+#include <stdexcept>
+#include <chrono>
+#include "RandEngine.h"
+
+
+
+const bool isAlpha(const std::string&); //returns true if string contains spaces and alphabetical numbers only
+const bool isAlphaStrict(const std::string&); // returns true if string contains alphabetical chars only
+const bool isAlphaNum(const std::string&); // returns true if contains alphanum characters and spaces
+const bool isAlphaNumStrict(const std::string&); //returns true if contains Alphanum + spaces
+
 
 // TODO: add headers that you want to pre-compile here
 

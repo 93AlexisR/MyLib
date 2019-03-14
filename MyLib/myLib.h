@@ -23,3 +23,10 @@ const bool isAlphaStrict(const std::string&); // returns true if string contains
 const bool isAlphaNum(const std::string&); // returns true if contains alphanum characters and spaces
 const bool isAlphaNumStrict(const std::string&); //returns true if contains Alphanum + spaces
 
+const int charToInt(char& convertMe) {
+	if (convertMe < 48 || convertMe > 57) {
+		std::cout << "invalid value, aborting (charToInt function crash)" << std::endl;
+		abort();
+	}
+	return convertMe - 48;
+}

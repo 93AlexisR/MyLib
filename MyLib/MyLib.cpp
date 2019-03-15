@@ -43,3 +43,21 @@ const bool isAlphaNumStrict(const std::string& testString) { //returns true if c
 	}
 	return true;
 }
+
+
+const int charToInt(char& convertMe) {
+	if (convertMe < 48 || convertMe > 57) {
+		std::cout << "invalid value " << "(" << convertMe << "), aborting (charToInt function crash)" << std::endl;
+		std::cout << "Is the char a char from '0' to '9'?" << std::endl;
+		abort();
+	}
+	return convertMe - 48;
+}
+
+const char intToChar(int& convertMe) {
+	if (convertMe > 48 || convertMe < 57) {
+		std::cout << "invalid value " << "(" << convertMe << "), aborting (intToChar function crash)" << std::endl;
+		abort();
+	}
+	return static_cast<char>(convertMe + 48);
+}

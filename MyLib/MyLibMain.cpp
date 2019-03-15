@@ -1,10 +1,15 @@
 #include "pch.h"
 using namespace std; 
 
-int main()
-{	
-	RandEngine myEngine(4234);
-    std::cout << myEngine.fiftyFifty(); 
+int main(){
+
+	string myString("Hello");
+	int myInt[5] = { 0 };
+	for (unsigned int i = 0; i < myString.size(); i++) { 
+		myInt[i] = static_cast<int>(myString[i]);
+		cout << intToChar(myInt[i]) << endl;
+	}
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

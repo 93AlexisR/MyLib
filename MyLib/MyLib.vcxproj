@@ -151,11 +151,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="ButtonPress.hpp" />
+    <ClInclude Include="CLog.h" />
     <ClInclude Include="myLib.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="RandEngine.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ButtonPress.cpp" />
+    <ClCompile Include="CLog.cpp" />
     <ClCompile Include="myLib.cpp" />
     <ClCompile Include="MyLibMain.cpp" />
     <ClCompile Include="pch.cpp">

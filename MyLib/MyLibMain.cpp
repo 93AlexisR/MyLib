@@ -1,15 +1,18 @@
 #include "pch.h"
 using namespace std; 
 
+
+
 int main(){
+	CLog::SetLevel(CLog::Debug);
+	CLog::Write(CLog::Debug, "testing 1 2 3");
+	CLog::SetLevel(0);
+	
+	CLog::SetLevel(3);
+	CLog::Write(CLog::Debug, "testing 1 2 3");
 
-	string myString("Hello");
-	int myInt[5] = { 0 };
-	for (unsigned int i = 0; i < myString.size(); i++) { 
-		myInt[i] = static_cast<int>(myString[i]);
-		cout << intToChar(myInt[i]) << endl;
-	}
-
+	ButtonPress myButton;
+	//myButton.calibrateNewKey();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

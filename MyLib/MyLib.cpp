@@ -1,4 +1,5 @@
 #include "pch.h"
+using namespace std;
 
 //6.7.1 rolling a six sided die; this program calculates the average of some set amount of
 //random throws with a set upper limit
@@ -45,19 +46,38 @@ const bool isAlphaNumStrict(const std::string& testString) { //returns true if c
 }
 
 
-const int charToInt(char& convertMe) {
+const int charToInt(const char& convertMe) {
 	if (convertMe < 48 || convertMe > 57) {
-		std::cout << "invalid value " << "(" << convertMe << "), aborting (charToInt function crash)" << std::endl;
-		std::cout << "Is the char a char from '0' to '9'?" << std::endl;
+		std::cout << "invalid value, aborting (charToInt function crash)" << std::endl;
 		abort();
 	}
 	return convertMe - 48;
 }
 
-const char intToChar(int& convertMe) {
-	if (convertMe > 48 || convertMe < 57) {
-		std::cout << "invalid value " << "(" << convertMe << "), aborting (intToChar function crash)" << std::endl;
+string vecToString(const vector<char> fakeString) {
+	const unsigned short int stringSize = static_cast<unsigned short int>(fakeString.size());
+	string tempString{ "." };
+	tempString.resize(fakeString.size());
+	for (unsigned int i = 0; i < stringSize; i++) {
+		tempString[i] = fakeString[i];
+	}
+	return tempString;
+}
+
+const char intToChar(const unsigned short int myChar) {
+	unsigned short int newChar = 48 + myChar;
+	if (newChar < 48 || newChar > 126) {
+		cout << "intToChar crash (out of bounds)" << endl;
 		abort();
 	}
-	return static_cast<char>(convertMe + 48);
+	return static_cast<char>(newChar);
+}
+
+const unsigned int strToInt(const std::string& myString) {
+	unsigned short stringSize{ static_cast<unsigned short>(myString.size() - 1) };
+	unsigned int tempValue{ 0 };
+	for (int i = stringSize; i >= 0; i--) {
+		tempValue += static_cast<unsigned int>(charToInt(myString[i])*pow(10, stringSize - i));
+	}
+	return tempValue;
 }

@@ -24,6 +24,12 @@
     <ClInclude Include="myLib.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CLog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ButtonPress.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RandEngine.cpp">
@@ -36,6 +42,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="myLib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CLog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ButtonPress.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
